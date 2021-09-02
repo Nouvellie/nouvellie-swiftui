@@ -7,46 +7,63 @@
 
 import SwiftUI
 
-struct SignIn: View {
+struct SignInView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @Environment(\.presentationMode) var presentationMode
+    @State var nouveUsername:String = ""
+    @State var nouvePassword:String = ""
     
     var body: some View {
-        
-        GeometryReader  { geometry in
-            ZStack {
-                ScrollView(.vertical) {
-                    VStack {
-                        NouveSignInNavigation()
-                            .padding(.horizontal, 15)
-                            .padding(.bottom)
-                            .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                            .background(Color.colorNouveDarkBlack).ignoresSafeArea(.all)
-                        Spacer()
+//        NavigationView {
+            GeometryReader { geometry in
+                ZStack {
+                    Color.colorNouveBlack
+                        .ignoresSafeArea()
+                    ScrollView {
+                        VStack {
+                            Spacer()
+                            Form {
+                                HStack {
+                                    Image(systemName: "person")
+                                    TextField("Username", text: $nouveUsername)
+                                }
+                                HStack {
+                                    Image(systemName: "lock.fill")
+                                    TextField("Password", text: $nouvePassword)
+                                }
+                                
+                            }.frame(width: 300, height: 150)
+                            Spacer()
+                            
+                        } // vstack.
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                    } // scroll.
+                } // zstack.
+                .foregroundColor(Color.colorNouveWhite)
+            } // geo.
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                leading: Text("Sign Up"),
+                trailing: Button(
+                    "Home",
+                    action: { self.presentationMode.wrappedValue.dismiss() }
+                ))
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
                         Image(systemName: "textbox.he")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.colorNouveHardRed)
-                            .padding(.top)
-                            .frame(width: 240, height: 128, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                        Text("Nouvellie APP")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.colorNouveHardRed)
-                        Spacer()
-                        NouveFooter()
-                            .padding(.horizontal, 15)
-                    }.frame(width: geometry.size.width, height: geometry.size.height)
+                        Text("Sign In").font(.headline)
+                    }.foregroundColor(Color.colorNouveHardRed)
                 }
-            }.background(Color.colorNouveBlack.ignoresSafeArea(.all, edges: .all))
-            .ignoresSafeArea(.all, edges: .top)
-        }
-    }
+            }
+            .navigationBarColor(uicolorNouveDarkBlack)
+            .foregroundColor(Color.colorNouveWhite)
+//        } // nav.
+    } // body.
 }
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignInView()
     }
 }

@@ -4,37 +4,60 @@ struct ContentView: View {
     
     var body: some View {
         
-        GeometryReader  { geometry in
-            ZStack {
-                ScrollView(.vertical) {
-                    VStack {
-                        NouveHomeNavigation()
-                            .padding(.horizontal, 15)
-                            .padding(.bottom)
-                            .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                            .background(Color.colorNouveDarkBlack).ignoresSafeArea(.all)
-                        Spacer()
+        NavigationView {
+            GeometryReader { geometry in
+                ZStack {
+                    Color.colorNouveBlack
+                        .ignoresSafeArea()
+                    ScrollView {
+                        VStack {
+                            VStack {
+                                Image(systemName: "textbox.he")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 240, height: 128)
+                                Text("Nouvellie")
+                                    .font(.largeTitle)
+                            }.padding(.top)
+                            .foregroundColor(Color.colorNouveHardRed)
+                            
+                            Spacer()
+                            
+                            Text("WELCOME!")
+                                .font(.largeTitle)
+                            
+                            Spacer()
+                            
+//                            HStack {
+//                                Spacer()
+//                                Text("v0.1.0")
+//                                    .bold()
+//                            }.padding(.horizontal, 15)
+                            .foregroundColor(Color.colorNouveHardRed)
+                            
+                        } // vstack.
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                    } // scroll.
+                } // zstack.
+                .foregroundColor(Color.colorNouveWhite)
+            } // geo.
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                leading: NavigationLink("Sign In", destination: SignInView().navigationBarBackButtonHidden(true)),
+                trailing: Text("Menu"))
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
                         Image(systemName: "textbox.he")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.colorNouveHardRed)
-                            .padding(.top)
-                            .frame(width: 240, height: 128, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                        Text("Nouvellie APP")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.colorNouveHardRed)
-                        Spacer()
-                        NouveFooter()
-                            .padding(.horizontal, 15)
-                    }.frame(width: geometry.size.width, height: geometry.size.height)
+                        Text("Home").font(.headline)
+                    }.foregroundColor(Color.colorNouveHardRed)
                 }
-            }.background(Color.colorNouveBlack.ignoresSafeArea(.all, edges: .all))
-            .ignoresSafeArea(.all, edges: .top)
-        }
-    }
-}
+            }
+            .navigationBarColor(uicolorNouveDarkBlack)
+            .foregroundColor(Color.colorNouveWhite)
+        } // nav.
+    } // body.
+} // view.
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

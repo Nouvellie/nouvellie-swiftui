@@ -12,6 +12,7 @@
 		1361E1BE26DEFCA000ABCB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361E1BD26DEFCA000ABCB40 /* Assets.xcassets */; };
 		1361E1C126DEFCA000ABCB40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361E1C026DEFCA000ABCB40 /* Preview Assets.xcassets */; };
 		13F10D1C26E0B13800CBA99E /* NouveNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */; };
+		13F10D2126E0D76500CBA99E /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F10D2026E0D76500CBA99E /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1361E1C026DEFCA000ABCB40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1361E1C226DEFCA000ABCB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouveNavigation.swift; sourceTree = "<group>"; };
+		13F10D2026E0D76500CBA99E /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		1361E1B826DEFC9900ABCB40 /* nouvellieui */ = {
 			isa = PBXGroup;
 			children = (
+				13F10D1F26E0D73400CBA99E /* Views */,
 				13F10D1A26E0B11B00CBA99E /* Utils */,
 				1361E1BB26DEFC9900ABCB40 /* ContentView.swift */,
 				1361E1B926DEFC9900ABCB40 /* nouvellieuiApp.swift */,
@@ -78,6 +81,14 @@
 				13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		13F10D1F26E0D73400CBA99E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13F10D2026E0D76500CBA99E /* SignIn.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				1361E1BC26DEFC9900ABCB40 /* ContentView.swift in Sources */,
 				1361E1BA26DEFC9900ABCB40 /* nouvellieuiApp.swift in Sources */,
 				13F10D1C26E0B13800CBA99E /* NouveNavigation.swift in Sources */,
+				13F10D2126E0D76500CBA99E /* SignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

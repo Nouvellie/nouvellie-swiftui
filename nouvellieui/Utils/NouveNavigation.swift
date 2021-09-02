@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct NouveHomeNavigation: View {
+    
+    @State private var isPresented = false
+    
     var body: some View {
         
         HStack {
-            Text("Sign In")
-                .bold()
-                .foregroundColor(Color.colorNouveWhite)
+            Button("Sign In!") {
+                        isPresented.toggle()
+                    }.fullScreenCover(isPresented: $isPresented, content: SignIn.init)
             Spacer()
             Image(systemName: "textbox.he")
                 .foregroundColor(Color.colorNouveHardRed)
@@ -22,6 +25,27 @@ struct NouveHomeNavigation: View {
                 .foregroundColor(Color.colorNouveHardRed)
             Spacer()
             Text("Menu")
+                .bold()
+                .foregroundColor(Color.colorNouveWhite)
+        }
+    }
+}
+
+struct NouveSignInNavigation: View {
+    var body: some View {
+        
+        HStack {
+            Text("Sign Up")
+                .bold()
+                .foregroundColor(Color.colorNouveWhite)
+            Spacer()
+            Image(systemName: "textbox.he")
+                .foregroundColor(Color.colorNouveHardRed)
+            Text("Sign In")
+                .bold()
+                .foregroundColor(Color.colorNouveHardRed)
+            Spacer()
+            Text("Home")
                 .bold()
                 .foregroundColor(Color.colorNouveWhite)
         }

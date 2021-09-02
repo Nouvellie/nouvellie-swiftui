@@ -28,9 +28,25 @@ struct NouveHomeNavigation: View {
     }
 }
 
-struct NouveNavigation_Previews: PreviewProvider {
-    static var previews: some View {
-        NouveHomeNavigation()
+
+
+struct NouveFooter: View {
+    var body: some View {
+        
+        HStack {
+            Spacer()
+            
+            Link("www.nouvellie.pro", destination: URL(string: "https://www.google.cl")!)
+                .padding(.leading, 40.0)
+                .foregroundColor(Color.colorNouveWhite)
+                
+            
+            Spacer()
+            
+            Text("v0.1.0")
+                .bold()
+                .foregroundColor(Color.colorNouveHardRed)
+        }
     }
 }
 
@@ -40,4 +56,11 @@ extension Color {
     static let colorNouveDarkBlack = Color(red: 7 / 255, green: 9 / 255, blue: 14 / 255)
     static let colorNouveBlack = Color(red: 12 / 255, green: 14 / 255, blue: 19 / 255)
     static let colorNouveWhite = Color(red: 226 / 255, green: 228 / 255, blue: 233 / 255)
+}
+
+
+struct NouveNavigation_Previews: PreviewProvider {
+    static var previews: some View {
+        NouveFooter()
+    }
 }

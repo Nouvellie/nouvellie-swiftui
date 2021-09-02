@@ -11,6 +11,7 @@
 		1361E1BC26DEFC9900ABCB40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361E1BB26DEFC9900ABCB40 /* ContentView.swift */; };
 		1361E1BE26DEFCA000ABCB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361E1BD26DEFCA000ABCB40 /* Assets.xcassets */; };
 		1361E1C126DEFCA000ABCB40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361E1C026DEFCA000ABCB40 /* Preview Assets.xcassets */; };
+		13F10D1C26E0B13800CBA99E /* NouveNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1361E1BD26DEFCA000ABCB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1361E1C026DEFCA000ABCB40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1361E1C226DEFCA000ABCB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouveNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 		1361E1B826DEFC9900ABCB40 /* nouvellieui */ = {
 			isa = PBXGroup;
 			children = (
-				1361E1B926DEFC9900ABCB40 /* nouvellieuiApp.swift */,
+				13F10D1A26E0B11B00CBA99E /* Utils */,
 				1361E1BB26DEFC9900ABCB40 /* ContentView.swift */,
+				1361E1B926DEFC9900ABCB40 /* nouvellieuiApp.swift */,
 				1361E1BD26DEFCA000ABCB40 /* Assets.xcassets */,
 				1361E1C226DEFCA000ABCB40 /* Info.plist */,
 				1361E1BF26DEFCA000ABCB40 /* Preview Content */,
@@ -67,6 +70,14 @@
 				1361E1C026DEFCA000ABCB40 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13F10D1A26E0B11B00CBA99E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13F10D1B26E0B13800CBA99E /* NouveNavigation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				1361E1BC26DEFC9900ABCB40 /* ContentView.swift in Sources */,
 				1361E1BA26DEFC9900ABCB40 /* nouvellieuiApp.swift in Sources */,
+				13F10D1C26E0B13800CBA99E /* NouveNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
